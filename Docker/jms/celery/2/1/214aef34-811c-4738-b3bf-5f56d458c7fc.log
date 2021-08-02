@@ -1,0 +1,2 @@
+Sending mail error: please run connect() first
+Task common.tasks.send_mail_async[214aef34-811c-4738-b3bf-5f56d458c7fc] succeeded in 0.003594002002500929s: None

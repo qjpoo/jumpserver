@@ -1,0 +1,6 @@
+PLAY [测试资产可连接性] ****************************************************************
+TASK [ping] ********************************************************************
+[0;31mfatal: [10.10.13.200]: FAILED! => {"msg": "Timeout (12s) waiting for privilege escalation prompt: "}[0m
+PLAY RECAP *********************************************************************
+[0;31m10.10.13.200[0m               : ok=0    changed=0    unreachable=0    [0;31mfailed=1   [0m skipped=0    rescued=0    ignored=0
+Task assets.tasks.asset_connectivity.test_asset_connectivity_util[60252ac3-16b3-4ff5-8dd1-9a8fe2d55eb5] succeeded in 134.67179801300517s: {'contacted': {}, 'dark': {'10.10.13.200': {'ping': {...}}}, 'success': False}

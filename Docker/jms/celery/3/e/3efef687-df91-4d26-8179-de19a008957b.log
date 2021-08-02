@@ -1,0 +1,7 @@
+PLAY [更新资产硬件信息: ['192.168.11.118']] ********************************************
+TASK [setup] *******************************************************************
+[1;31mfatal: [192.168.11.118]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}[0m
+PLAY RECAP *********************************************************************
+[0;31m192.168.11.118[0m             : ok=0    changed=0    [1;31munreachable=1   [0m failed=0    skipped=0    rescued=0    ignored=0
+获取资产信息失败：192.168.11.118
+Task assets.tasks.gather_asset_hardware_info.update_assets_hardware_info_manual[3efef687-df91-4d26-8179-de19a008957b] succeeded in 2.36686629599717s: None

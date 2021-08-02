@@ -1,0 +1,6 @@
+PLAY [测试资产可连接性: ['192.168.11.118']] ********************************************
+TASK [ping] ********************************************************************
+[0;31mfatal: [192.168.11.118]: FAILED! => {"msg": "Missing sudo password"}[0m
+PLAY RECAP *********************************************************************
+[0;31m192.168.11.118[0m             : ok=0    changed=0    unreachable=0    [0;31mfailed=1   [0m skipped=0    rescued=0    ignored=0
+Task assets.tasks.asset_connectivity.test_assets_connectivity_manual[530b8ed2-108c-43fd-92b7-9b7bc3ad54bf] succeeded in 4.810068938997574s: (False, {'192.168.11.118': {'ping': {...}}})

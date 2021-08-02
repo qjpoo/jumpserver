@@ -1,0 +1,7 @@
+PLAY [更新资产硬件信息: ['192.168.11.118']] ********************************************
+TASK [setup] *******************************************************************
+[0;31mfatal: [192.168.11.118]: FAILED! => {"msg": "Missing sudo password"}[0m
+PLAY RECAP *********************************************************************
+[0;31m192.168.11.118[0m             : ok=0    changed=0    unreachable=0    [0;31mfailed=1   [0m skipped=0    rescued=0    ignored=0
+获取资产信息失败：192.168.11.118
+Task assets.tasks.gather_asset_hardware_info.update_assets_hardware_info_manual[408f2310-6d10-439f-ba08-caf6e4e2f8f7] succeeded in 2.4178143840108532s: None

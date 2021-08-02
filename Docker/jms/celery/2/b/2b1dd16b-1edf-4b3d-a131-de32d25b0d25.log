@@ -1,0 +1,6 @@
+PLAY [测试资产可连接性] ****************************************************************
+TASK [ping] ********************************************************************
+[1;31mfatal: [192.168.11.118]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Warning: Permanently added '192.168.11.118' (ECDSA) to the list of known hosts.\r\nPermission denied, please try again.", "unreachable": true}[0m
+PLAY RECAP *********************************************************************
+[0;31m192.168.11.118[0m             : ok=0    changed=0    [1;31munreachable=1   [0m failed=0    skipped=0    rescued=0    ignored=0
+Task assets.tasks.asset_connectivity.test_asset_connectivity_util[2b1dd16b-1edf-4b3d-a131-de32d25b0d25] succeeded in 2.864557644003071s: {'contacted': {}, 'dark': {'192.168.11.118': {'ping': {...}}}, 'success': False}

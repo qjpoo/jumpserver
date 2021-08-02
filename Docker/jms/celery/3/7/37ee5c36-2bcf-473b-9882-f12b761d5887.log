@@ -1,0 +1,83 @@
+推送系统用户到平台: [unixlike]
+主机数量: 1
+PLAY [推送系统用户到入资产: ops] **********************************************************************************************************************************************************************
+TASK [Add user ops] *************************************************************************************************************************************************************************
+[0;33mchanged: [192.168.1.7][0m
+TASK [Add group ops] ************************************************************************************************************************************************************************
+[0;32mok: [192.168.1.7][0m
+TASK [Set ops password] *********************************************************************************************************************************************************************
+[0;33mchanged: [192.168.1.7][0m
+TASK [Set ops sudo setting] *****************************************************************************************************************************************************************
+[0;33mchanged: [192.168.1.7][0m
+PLAY RECAP **********************************************************************************************************************************************************************************
+[0;33m192.168.1.7[0m                : [0;32mok=4   [0m [0;33mchanged=3   [0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+Task assets.tasks.push_system_user.push_system_user_to_assets[37ee5c36-2bcf-473b-9882-f12b761d5887] raised unexpected: OperationalError(2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "/opt/py3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/opt/py3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/opt/py3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/opt/py3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/opt/py3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.OperationalError: (2013, 'Lost connection to MySQL server during query')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/py3/lib/python3.8/site-packages/celery/app/trace.py", line 385, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/opt/py3/lib/python3.8/site-packages/celery/app/trace.py", line 650, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/usr/lib/python3.8/contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "/opt/jumpserver/apps/assets/tasks/push_system_user.py", line 301, in push_system_user_to_assets
+    return push_system_user_util(system_user, assets, task_name, username=username)
+  File "/opt/jumpserver/apps/orgs/utils.py", line 136, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/jumpserver/apps/assets/tasks/push_system_user.py", line 256, in push_system_user_util
+    run_task(tasks, no_special_assets)
+  File "/opt/jumpserver/apps/assets/tasks/push_system_user.py", line 216, in run_task
+    task.run()
+  File "/opt/jumpserver/apps/ops/models/adhoc.py", line 105, in run
+    return latest_adhoc.run()
+  File "/opt/jumpserver/apps/ops/models/adhoc.py", line 195, in run
+    return execution.start()
+  File "/opt/jumpserver/apps/ops/models/adhoc.py", line 295, in start
+    self.clean_up(summary, time_start)
+  File "/opt/jumpserver/apps/ops/models/adhoc.py", line 300, in clean_up
+    task = Task.objects.get(id=self.task_id)
+  File "/opt/py3/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/opt/py3/lib/python3.8/site-packages/django/db/models/query.py", line 425, in get
+    num = len(clone)
+  File "/opt/py3/lib/python3.8/site-packages/django/db/models/query.py", line 269, in __len__
+    self._fetch_all()
+  File "/opt/py3/lib/python3.8/site-packages/django/db/models/query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/opt/py3/lib/python3.8/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/opt/py3/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "/opt/py3/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/opt/py3/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/opt/py3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/opt/py3/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/opt/py3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/opt/py3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/opt/py3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/opt/py3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/opt/py3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (2013, 'Lost connection to MySQL server during query')

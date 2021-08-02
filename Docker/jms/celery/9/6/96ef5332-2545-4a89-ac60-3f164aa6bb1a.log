@@ -1,0 +1,8 @@
+推送系统用户到平台: [unixlike]
+主机数量: 1
+PLAY [推送系统用户到入资产: ops] *********************************************************
+TASK [Add user ops] ************************************************************
+[1;31mfatal: [192.168.11.118]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Warning: Permanently added '192.168.11.118' (ECDSA) to the list of known hosts.\r\nPermission denied, please try again.", "unreachable": true}[0m
+PLAY RECAP *********************************************************************
+[0;31m192.168.11.118[0m             : ok=0    changed=0    [1;31munreachable=1   [0m failed=0    skipped=0    rescued=0    ignored=0
+Task assets.tasks.push_system_user.push_system_user_to_assets[96ef5332-2545-4a89-ac60-3f164aa6bb1a] succeeded in 2.896476583002368s: None

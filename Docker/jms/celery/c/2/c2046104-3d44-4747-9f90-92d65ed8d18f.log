@@ -1,0 +1,6 @@
+PLAY [测试资产可连接性] ****************************************************************
+TASK [ping] ********************************************************************
+[0;32mok: [192.168.11.158][0m
+PLAY RECAP *********************************************************************
+[0;32m192.168.11.158[0m             : [0;32mok=1   [0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+Task assets.tasks.asset_connectivity.test_asset_connectivity_util[c2046104-3d44-4747-9f90-92d65ed8d18f] succeeded in 3.446105480994447s: {'contacted': {'192.168.11.158': {'ping': {...}}}, 'dark': {}, 'success': True}

@@ -1,0 +1,6 @@
+PLAY [更新资产硬件信息: ['192.168.11.158']] ********************************************
+TASK [setup] *******************************************************************
+[0;32mok: [192.168.11.158][0m
+PLAY RECAP *********************************************************************
+[0;32m192.168.11.158[0m             : [0;32mok=1   [0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+Task assets.tasks.gather_asset_hardware_info.update_assets_hardware_info_manual[1be04b9b-05ad-4134-aee9-56d1b5b3d884] succeeded in 1.7238833049923414s: None

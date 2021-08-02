@@ -1,0 +1,21 @@
+cd /jms/Docker/jms && docker run --name jms_all -d \
+-v $(pwd)/mysql:/var/lib/mysql \
+-v $(pwd)/jumpserver:/opt/jumpserver/data/media \
+-v $(pwd)/celery:/opt/jumpserver/data/celery \
+-v $(pwd)/koko/data:/opt/koko/data \
+-v $(pwd)/guacamole/data:/config/guacamole/data \
+-v /etc/localtime:/etc/localtime  \
+-p 80:80 \
+-p 2222:2222 \
+-e SECRET_KEY=jian \
+-e BOOTSTRAP_TOKEN=jian \
+-e DB_HOST=10.10.13.163 \
+-e DB_PORT=3306 \
+-e DB_USER=jumpserver \
+-e DB_PASSWORD=jian \
+-e DB_NAME=jumpserver \
+-e REDIS_HOST=10.10.13.163 \
+-e REDIS_PORT=6379 \
+-e REDIS_PASSWORD=jian \
+--privileged=true \
+jumpserver/jms_all:v2.12.1

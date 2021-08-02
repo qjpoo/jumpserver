@@ -1,0 +1,8 @@
+推送系统用户到平台: [unixlike]
+主机数量: 1
+PLAY [推送系统用户到入资产: ops] *********************************************************
+TASK [Add user ops] ************************************************************
+[0;31mfatal: [192.168.11.118]: FAILED! => {"msg": "Missing sudo password"}[0m
+PLAY RECAP *********************************************************************
+[0;31m192.168.11.118[0m             : ok=0    changed=0    unreachable=0    [0;31mfailed=1   [0m skipped=0    rescued=0    ignored=0
+Task assets.tasks.push_system_user.push_system_user_to_assets[5ee4f3b5-4f92-4bf2-8ecb-f432886125c1] succeeded in 1.9731111879955279s: None

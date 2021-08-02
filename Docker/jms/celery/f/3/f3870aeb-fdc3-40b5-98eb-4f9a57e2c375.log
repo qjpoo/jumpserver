@@ -1,0 +1,10 @@
+开始测试系统用户在该系统平台的可连接性: [unixlike]
+主机数量: 2
+PLAY [测试系统用户可连接性: ops(ops)] ****************************************************
+TASK [ping] ********************************************************************
+[0;32mok: [192.168.11.158][0m
+[0;32mok: [192.168.11.118][0m
+PLAY RECAP *********************************************************************
+[0;32m192.168.11.118[0m             : [0;32mok=1   [0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+[0;32m192.168.11.158[0m             : [0;32mok=1   [0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+Task assets.tasks.system_user_connectivity.test_system_user_connectivity_manual[f3870aeb-fdc3-40b5-98eb-4f9a57e2c375] succeeded in 6.198898379007005s: None
